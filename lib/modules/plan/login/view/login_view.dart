@@ -53,18 +53,24 @@ class LoginView extends StatelessWidget {
                 ),
               ),
               customSpacer(30),
-              textfieldBuilder(context, Icons.mail_outline_rounded,
-                  LocaleKeys.login_email.tr()),
+              textfieldBuilder(
+                context,
+                Icons.mail_outline_rounded,
+                LocaleKeys.login_email.tr(),
+              ),
               customSpacer(30),
               textfieldBuilder(
-                  context, Icons.lock_open, LocaleKeys.login_password.tr()),
+                context,
+                Icons.lock_open,
+                LocaleKeys.login_password.tr(),
+              ),
               customSpacer(50),
               Container(
                 margin: context.paddingHorizontal3,
                 width: context.width,
                 height: 40.w,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => viewmodel.login(),
                   child: Text(
                     LocaleKeys.login_login.tr(),
                     style: context.textTheme.bodyMedium,

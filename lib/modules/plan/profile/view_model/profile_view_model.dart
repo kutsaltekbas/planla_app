@@ -1,13 +1,11 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:planla_app/core/init/navigation/application_router.dart';
 import '../../../../core/base/model/base_view_model.dart';
 import 'package:mobx/mobx.dart';
-part 'login_view_model.g.dart';
+part 'profile_view_model.g.dart';
 
-class LoginViewModel = _LoginViewModelBase with _$LoginViewModel;
+class ProfileViewModel = _ProfileViewModelBase with _$ProfileViewModel;
 
-abstract class _LoginViewModelBase with Store, BaseViewModel {
+abstract class _ProfileViewModelBase with Store, BaseViewModel {
   @observable
   bool isLoading = false;
 
@@ -19,9 +17,5 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
   @action
   void changeIsLoading() {
     isLoading = !isLoading;
-  }
-
-  void login() {
-    buildContext!.router.replace(const HomeRoute());
   }
 }
