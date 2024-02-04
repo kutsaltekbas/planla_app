@@ -1,0 +1,10 @@
+{
+    "login": {
+        "app_title": "Planla App",
+        "description": "Planla App'e Hoşgeldiniz ! Lütfen giriş yapın.",
+        "email": "E-Mail",
+        "password": "Şifre",
+        "login": "Giriş Yap",
+        "forgot_password": "Şifremi Unuttum"
+    }
+}
