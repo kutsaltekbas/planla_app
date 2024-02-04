@@ -6,5 +6,10 @@
         "password": "Şifre",
         "login": "Giriş Yap",
         "forgot_password": "Şifremi Unuttum"
+    },
+    "main": {
+        "welcome": "Welcome ! @key",
+        "active_events": "Aktif Planlar",
+        "old_events": "Geçmiş Planlar"
     }
 }

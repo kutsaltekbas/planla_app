@@ -63,13 +63,13 @@ class AppThemeLight extends AppTheme {
         ),
         displayMedium: TextStyle(
           fontSize: 28.sp,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w600,
           letterSpacing: -0.5,
           color: _colorSchemeLight.onBackground,
         ),
         displaySmall: TextStyle(
           fontSize: 24.sp,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w600,
           color: _colorSchemeLight.onBackground,
         ),
         headlineLarge: TextStyle(
