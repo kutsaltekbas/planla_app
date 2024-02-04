@@ -19,7 +19,7 @@ class AppThemeLight extends AppTheme {
         elevatedButtonTheme: _elevatedButtonTheme,
         outlinedButtonTheme: _outlinedButtonTheme,
         timePickerTheme: _timePickerTheme,
-        fontFamily: "Inter",
+        fontFamily: "Ubuntu",
       );
   /* Color Palette For The App. */
 
@@ -30,12 +30,12 @@ class AppThemeLight extends AppTheme {
         secondary: Color(0xffE7912D), //
         onSecondary: Color(0xffffffff),
         onPrimary: Color(0xffffffff), //
-        background: Color(0xffF4F8FB), //
+        background: Color(0xff24786D), //
         onBackground: Color(0xff102E53), //
         error: Color(0xffff5656), //
         errorContainer: Color(0xFFFCFF57), //
         onError: Color(0xffffffff),
-        surface: Color(0xffE6EBF3),
+        surface: Color(0xffCDD1D0),
         onSurface: Color(0xff596372), //
         tertiary: Color(0xff515BF6), //
         tertiaryContainer: Color(0xff59C08D), //
@@ -45,7 +45,7 @@ class AppThemeLight extends AppTheme {
         onTertiaryContainer: Color(0xffDADADC), //
         onErrorContainer: Color(0xffffcc86), //
         inversePrimary: Color(0xff40a3ff),
-        inverseSurface: Color(0xff192038),
+        inverseSurface: Color(0xff797C7B),
         onPrimaryContainer: Color(0xff024786),
         onInverseSurface: Color(0xffDFE4EC),
       );
@@ -56,9 +56,9 @@ class AppThemeLight extends AppTheme {
 
   TextTheme get _textThemeLight => TextTheme(
         displayLarge: TextStyle(
-          fontSize: 30.sp,
+          fontSize: 32.sp,
           fontWeight: FontWeight.bold,
-          letterSpacing: -0.5,
+          letterSpacing: 0,
           color: _colorSchemeLight.onBackground,
         ),
         displayMedium: TextStyle(
@@ -111,7 +111,7 @@ class AppThemeLight extends AppTheme {
         bodyMedium: TextStyle(
           fontSize: 16.sp,
           fontWeight: FontWeight.w400,
-          color: _colorSchemeLight.onBackground,
+          color: _colorSchemeLight.onPrimary,
         ),
         titleMedium: TextStyle(
           fontSize: 12.sp,
@@ -136,7 +136,8 @@ class AppThemeLight extends AppTheme {
   /* Text Field Theme */
 
   InputDecorationTheme get _inputDecorationTheme => InputDecorationTheme(
-        focusColor: _colorSchemeLight.secondaryContainer,
+        contentPadding: EdgeInsets.zero,
+        focusColor: _colorSchemeLight.background,
         labelStyle: _textThemeLight.labelLarge!
             .copyWith(color: _colorSchemeLight.onBackground.withOpacity(0.4)),
         floatingLabelStyle: _textThemeLight.labelLarge!
@@ -144,9 +145,10 @@ class AppThemeLight extends AppTheme {
         hintStyle: _textThemeLight.labelLarge!
             .copyWith(color: _colorSchemeLight.onBackground.withOpacity(0.3)),
         helperStyle: _textThemeLight.titleSmall!
-            .copyWith(color: _colorSchemeLight.primary),
+            .copyWith(color: _colorSchemeLight.background),
         fillColor: _colorSchemeLight.secondaryContainer,
-        prefixIconColor: _colorSchemeLight.onBackground.withOpacity(0.4),
+        prefixIconColor: _colorSchemeLight.background,
+        suffixIconColor: _colorSchemeLight.background,
         errorStyle: _textThemeLight.titleSmall!
             .copyWith(color: _colorSchemeLight.error),
         errorBorder: OutlineInputBorder(
@@ -157,19 +159,18 @@ class AppThemeLight extends AppTheme {
           borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(color: _colorSchemeLight.error),
         ),
-        border: OutlineInputBorder(
+        border: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          gapPadding: 0,
-          borderSide: BorderSide(color: _colorSchemeLight.surface),
+          borderSide: BorderSide(color: _colorSchemeLight.surface, width: 1.w),
         ),
-        enabledBorder: OutlineInputBorder(
+        enabledBorder: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: _colorSchemeLight.surface),
+          borderSide: BorderSide(color: _colorSchemeLight.surface, width: 1.w),
         ),
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          gapPadding: 0,
-          borderSide: BorderSide(color: _colorSchemeLight.primary),
+          borderSide:
+              BorderSide(color: _colorSchemeLight.background, width: 1.w),
         ),
         disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
@@ -182,8 +183,9 @@ class AppThemeLight extends AppTheme {
   ElevatedButtonThemeData get _elevatedButtonTheme => ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           foregroundColor: _colorSchemeLight.onPrimary,
-          backgroundColor: _colorSchemeLight.tertiary,
+          backgroundColor: _colorSchemeLight.background,
           shape: RoundedRectangleBorder(
+            side: BorderSide.none,
             borderRadius: BorderRadius.circular(3),
           ),
           elevation: 0,

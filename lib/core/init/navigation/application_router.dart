@@ -1,16 +1,20 @@
 import 'package:auto_route/auto_route.dart';
+import '../../../modules/plan/splash/view/splash_view.dart';
+import '../../../modules/plan/login/view/login_view.dart';
 
-// part 'application_router.gr.dart';
-// class AppRouter extends $AppRouter {
-//   @override
-//   List<AutoRoute> getRoutes => [];
-// }
 part 'application_router.gr.dart';
 
 @AutoRouterConfig()
 class AppRouter extends _$AppRouter {
   @override
   List<AutoRoute> get routes => [
-        /// routes go here
+        AutoRoute(
+          page: SplashRoute.page,
+          path: '/',
+        ),
+        AutoRoute(
+          page: LoginRoute.page,
+          path: '/login',
+        )
       ];
 }
