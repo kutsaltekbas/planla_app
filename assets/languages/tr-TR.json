@@ -11,5 +11,19 @@
         "welcome": "Welcome ! @key",
         "active_events": "Aktif Planlar",
         "old_events": "Geçmiş Planlar"
+    },
+    "profile": {
+        "title": "Profilim",
+        "code": "Arkadaşlık Kodu",
+        "city": "İstanbul",
+        "email": "E-Posta",
+        "avaible_days": "Müsait Günlerim",
+        "description": "Hakkımda",
+        "sex": "Cinsiyet"
+    },
+    "create_plan": {
+        "title": "Hadi Yeni Bir Plan Oluştur !",
+        "my_plans": "Planlarım",
+        "plan_invites": "Plan Davetlerim"
     }
 }
