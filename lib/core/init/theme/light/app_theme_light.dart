@@ -89,7 +89,7 @@ class AppThemeLight extends AppTheme {
         ),
         labelLarge: TextStyle(
           fontSize: 18.sp,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w600,
           color: _colorSchemeLight.onBackground,
         ),
         labelMedium: TextStyle(
