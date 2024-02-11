@@ -47,7 +47,7 @@ class HomeView extends StatelessWidget {
             topLeft: Radius.circular(30.w), topRight: Radius.circular(30.w)),
         boxShadow: [
           BoxShadow(
-              color: Colors.grey.shade400,
+              color: Colors.black12,
               offset: const Offset(0, 1),
               blurRadius: 10.w)
         ],

@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:planla_app/core/init/app/application_init.dart';
 import 'package:provider/provider.dart';
 
 import 'core/constants/app/app_constants.dart';
@@ -11,12 +12,8 @@ import 'core/init/notifier/theme_notifier.dart';
 
 //comment for commit test
 Future<void> main() async {
-  await _init();
+  await ApplicationInit.init();
   runApp(MyApp());
-}
-
-Future<void> _init() async {
-  WidgetsFlutterBinding.ensureInitialized();
 }
 
 class MyApp extends StatelessWidget {
