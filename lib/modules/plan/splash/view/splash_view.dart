@@ -5,7 +5,6 @@ import 'package:planla_app/core/extension/context_extension.dart';
 import '../../../../core/base/view/base_view.dart';
 import '../../../../core/constants/image/image_constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../viewmodel/splash_view_model.dart';
 
