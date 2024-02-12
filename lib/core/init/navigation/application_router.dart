@@ -22,6 +22,10 @@ class AppRouter extends _$AppRouter {
           path: '/login',
         ),
         AutoRoute(
+          page: PlanRoute.page,
+          path: '/subPlan',
+        ),
+        AutoRoute(
           page: HomeRoute.page,
           path: '/home',
           children: [
@@ -32,12 +36,6 @@ class AppRouter extends _$AppRouter {
             AutoRoute(
               page: CreatePlanRoute.page,
               path: 'createPlan',
-              children: [
-                AutoRoute(
-                  page: PlanRoute.page,
-                  path: 'subPlan',
-                ),
-              ],
             ),
             AutoRoute(
               page: ProfileRoute.page,
