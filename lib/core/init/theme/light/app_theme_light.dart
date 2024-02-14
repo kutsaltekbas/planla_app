@@ -136,13 +136,13 @@ class AppThemeLight extends AppTheme {
   /* Text Field Theme */
 
   InputDecorationTheme get _inputDecorationTheme => InputDecorationTheme(
-        contentPadding: EdgeInsets.zero,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 10),
         focusColor: _colorSchemeLight.background,
         labelStyle: _textThemeLight.labelLarge!
             .copyWith(color: _colorSchemeLight.onBackground.withOpacity(0.4)),
         floatingLabelStyle: _textThemeLight.labelLarge!
             .copyWith(color: _colorSchemeLight.onBackground.withOpacity(0.4)),
-        hintStyle: _textThemeLight.labelLarge!
+        hintStyle: _textThemeLight.labelSmall!
             .copyWith(color: _colorSchemeLight.onBackground.withOpacity(0.3)),
         helperStyle: _textThemeLight.titleSmall!
             .copyWith(color: _colorSchemeLight.background),

@@ -33,7 +33,57 @@ class MainView extends StatelessWidget {
                   Padding(
                     padding: context.paddingHorizontal2,
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showModalBottomSheet(
+                          backgroundColor: context.colorScheme.onPrimary,
+                          elevation: 5.w,
+                          shape: BeveledRectangleBorder(
+                            borderRadius: BorderRadius.circular(50.w),
+                          ),
+                          context: context,
+                          builder: (context) {
+                            return Container(
+                              width: context.width,
+                              decoration: BoxDecoration(
+                                color: context.colorScheme.onPrimary,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(40.w),
+                                  topRight: Radius.circular(40.w),
+                                ),
+                              ),
+                              child: Column(
+                                children: [
+                                  customSpacer(10),
+                                  Divider(
+                                    thickness: 3.5.w,
+                                    color: context.colorScheme.surface,
+                                    indent: 125.w,
+                                    endIndent: 125.w,
+                                  ),
+                                  customSpacer(10),
+                                  Text(
+                                    "Hayko Konseri",
+                                    style: context.textTheme.labelLarge,
+                                  ),
+                                  customSpacer(10),
+                                  Icon(
+                                    Icons.local_activity_outlined,
+                                    size: 50.w,
+                                    color: context.colorScheme.background,
+                                  ),
+                                  customSpacer(10),
+                                  Divider(
+                                    thickness: 1.w,
+                                    color: context.colorScheme.surface,
+                                    indent: 100.w,
+                                    endIndent: 100.w,
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        );
+                      },
                       icon: Icon(
                         Icons.person_add_outlined,
                         size: 32.w,
@@ -89,6 +139,8 @@ class MainView extends StatelessWidget {
       },
     );
   }
+
+  SizedBox customSpacer(int space) => SizedBox(height: space.h);
 
   Tab tabBuilder(BuildContext context, String tabText, IconData tabIcon) {
     return Tab(

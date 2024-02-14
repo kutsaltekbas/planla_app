@@ -5,6 +5,7 @@ import '../../../modules/plan/home/view/home_view.dart';
 import '../../../modules/plan/main/view/main_view.dart';
 import '../../../modules/plan/profile/view/profile_view.dart';
 import '../../../modules/plan/create_plan/view/create_plan_view.dart';
+import '../../../modules/plan/create_plan/subviews/plan/view/plan_view.dart';
 
 part 'application_router.gr.dart';
 
@@ -20,19 +21,27 @@ class AppRouter extends _$AppRouter {
           page: LoginRoute.page,
           path: '/login',
         ),
-        AutoRoute(page: HomeRoute.page, path: '/home', children: [
-          AutoRoute(
-            page: MainRoute.page,
-            path: 'main',
-          ),
-          AutoRoute(
-            page: CreatePlanRoute.page,
-            path: 'createPlan',
-          ),
-          AutoRoute(
-            page: ProfileRoute.page,
-            path: 'profile',
-          ),
-        ])
+        AutoRoute(
+          page: PlanRoute.page,
+          path: '/subPlan',
+        ),
+        AutoRoute(
+          page: HomeRoute.page,
+          path: '/home',
+          children: [
+            AutoRoute(
+              page: MainRoute.page,
+              path: 'main',
+            ),
+            AutoRoute(
+              page: CreatePlanRoute.page,
+              path: 'createPlan',
+            ),
+            AutoRoute(
+              page: ProfileRoute.page,
+              path: 'profile',
+            ),
+          ],
+        ),
       ];
 }
