@@ -6,6 +6,7 @@ import '../../../modules/plan/main/view/main_view.dart';
 import '../../../modules/plan/profile/view/profile_view.dart';
 import '../../../modules/plan/create_plan/view/create_plan_view.dart';
 import '../../../modules/plan/create_plan/subviews/plan/view/plan_view.dart';
+import '../../../modules/plan/update_plan_navigate_page/view/update_plan_navigator_view.dart';
 
 part 'application_router.gr.dart';
 
@@ -16,6 +17,10 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: SplashRoute.page,
           path: '/',
+        ),
+        AutoRoute(
+          page: UpdatePlanNavigatorRoute.page,
+          path: 'updatePlanNavigator',
         ),
         AutoRoute(
           page: LoginRoute.page,
