@@ -78,6 +78,69 @@ class MainView extends StatelessWidget {
                                     indent: 100.w,
                                     endIndent: 100.w,
                                   ),
+                                  GridView.builder(
+                                    padding: EdgeInsets.zero,
+                                    shrinkWrap: true,
+                                    itemCount:
+                                        viewmodel.planDetails.dataList.length,
+                                    gridDelegate:
+                                        const SliverGridDelegateWithFixedCrossAxisCount(
+                                            childAspectRatio: 1.4,
+                                            crossAxisCount: 3),
+                                    itemBuilder: (context, index) {
+                                      return SizedBox(
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Icon(
+                                                  viewmodel.planDetails
+                                                      .iconList[index],
+                                                  color: context
+                                                      .colorScheme.background,
+                                                ),
+                                                customSpacer(10),
+                                                Text(
+                                                  viewmodel.planDetails
+                                                      .titleList[index],
+                                                  style: context
+                                                      .textTheme.labelSmall!
+                                                      .copyWith(
+                                                          color: context
+                                                              .colorScheme
+                                                              .onSurface),
+                                                )
+                                              ],
+                                            ),
+                                            customSpacer(7),
+                                            Text(
+                                              viewmodel
+                                                  .planDetails.dataList[index],
+                                              style: context
+                                                  .textTheme.labelSmall!
+                                                  .copyWith(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                  customSpacer(10),
+                                  Container(
+                                    padding: context.paddingHorizontal3,
+                                    width: context.width,
+                                    height: 35.h,
+                                    child: ElevatedButton(
+                                      onPressed: () {},
+                                      child: Text("Katıl"),
+                                    ),
+                                  )
                                 ],
                               ),
                             );
