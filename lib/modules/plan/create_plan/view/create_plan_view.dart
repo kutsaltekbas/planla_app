@@ -33,9 +33,9 @@ class CreatePlanView extends StatelessWidget {
                   Padding(
                     padding: context.paddingHorizontal2,
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () => viewmodel.navigateSubPlanPage(),
                       icon: Icon(
-                        Icons.person_add_outlined,
+                        Icons.add_box_outlined,
                         size: 32.w,
                         color: context.colorScheme.background,
                       ),
