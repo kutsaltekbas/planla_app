@@ -7,6 +7,7 @@ import '../../../modules/plan/profile/view/profile_view.dart';
 import '../../../modules/plan/create_plan/view/create_plan_view.dart';
 import '../../../modules/plan/create_plan/subviews/plan/view/plan_view.dart';
 import '../../../modules/plan/update_plan_navigate_page/view/update_plan_navigator_view.dart';
+import '../../../modules/plan/edit_plan_members/view/edit_plan_members_view.dart';
 
 part 'application_router.gr.dart';
 
@@ -20,7 +21,11 @@ class AppRouter extends _$AppRouter {
         ),
         AutoRoute(
           page: UpdatePlanNavigatorRoute.page,
-          path: 'updatePlanNavigator',
+          path: '/updatePlanNavigator',
+        ),
+        AutoRoute(
+          page: EditPlanMembersRoute.page,
+          path: '/editPlanMembers',
         ),
         AutoRoute(
           page: LoginRoute.page,
