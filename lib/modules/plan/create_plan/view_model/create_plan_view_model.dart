@@ -24,4 +24,8 @@ abstract class _CreatePlanViewModelBase with Store, BaseViewModel {
   void navigateSubPlanPage() {
     buildContext!.router.push(const PlanRoute());
   }
+
+  void navigateEditPlanRoute() {
+    buildContext!.router.push(const UpdatePlanNavigatorRoute());
+  }
 }

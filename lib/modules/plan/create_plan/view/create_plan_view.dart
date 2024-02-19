@@ -71,10 +71,12 @@ class CreatePlanView extends StatelessWidget {
                 ),
               ),
             ),
-            body: const TabBarView(
+            body: TabBarView(
               children: [
                 Center(
-                  child: Text("Tab TEST 1"),
+                  child: GestureDetector(
+                      onTap: () => viewmodel.navigateEditPlanRoute(),
+                      child: Text("Tab TEST 1")),
                 ),
                 Center(
                   child: Text("Tab TEST 2"),
