@@ -1,0 +1,9 @@
+{
+    "user_id": "",
+    "email": "",
+    "password": "",
+    "full_name": "",
+    "is_first_login": true,
+    "friend_list": [],
+    "group_list": []
+}
